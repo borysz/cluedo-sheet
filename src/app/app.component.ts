@@ -46,7 +46,7 @@ export class AppComponent {
           event.target.classList.toggle('c-img-q');
         }
         this.clickCount = 0;
-    }, 250)
+    }, 200)
     
     //event.target.classList.add('c-img-x');     
     

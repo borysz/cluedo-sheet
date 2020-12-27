@@ -10,7 +10,7 @@ $border-color: rgb(81, 81, 81);
         .c-grey-bg {
             background: $header-gb-color;
         }
-        .c-gamers {
+        .c-players {
             border-right: none;
             border-left: none;
             width: 30%;
@@ -33,6 +33,13 @@ $border-color: rgb(81, 81, 81);
         }
         .c-r-b-t {
             border-top: none;
+        }
+        .c-input-players {
+            width: 90%;
+            height: 20px;
+            padding: 0px 3px 0px 3px;
+            border: none;
+            text-transform: uppercase;
         }
     }
 }

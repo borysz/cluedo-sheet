@@ -1,0 +1,36 @@
+.cluedo-sheet {
+  font-size: 12px;
+}
+.cluedo-sheet .cluedo-table {
+  line-height: 21px;
+}
+.cluedo-sheet .cluedo-table .c-border {
+  border: 1px solid #515151;
+}
+.cluedo-sheet .cluedo-table .c-grey-bg {
+  background: #E2E2DB;
+}
+.cluedo-sheet .cluedo-table .c-gamers {
+  border-right: none;
+  border-left: none;
+  width: 30%;
+}
+.cluedo-sheet .cluedo-table .c-uppercase {
+  text-transform: uppercase;
+}
+.cluedo-sheet .cluedo-table .c-b-w {
+  width: 10%;
+  border-right: none;
+}
+.cluedo-sheet .cluedo-table .c-g-row {
+  text-align: center;
+}
+.cluedo-sheet .cluedo-table .c-text-align {
+  text-align: center;
+}
+.cluedo-sheet .cluedo-table .c-b {
+  font-weight: bold;
+}
+.cluedo-sheet .cluedo-table .c-r-b-t {
+  border-top: none;
+}

@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'cluedo-sheet';
+  title = 'Cluedo Sheet';
+  headerList = {};
+
+  constructor(){
+    this.headerList = {
+      0: ['Mr. Green', 'Musterd', 'Orchid', 'Peacook', 'Pulm', 'Scarlett'],     
+      1: ['Bálterem', 'Billiárdszoba', 'Télikert', 'Ebédlő', 'Hall', 'Konyha', 'Könyvtár', 'Társalgó', 'Dolgozószoba'],
+      2: ['Gyertyatartó', 'Tőr', 'Ólmosbot', 'Revolver', 'Szobor', 'Méreg'],
+    }
+  }
 }

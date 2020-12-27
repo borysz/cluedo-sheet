@@ -1,0 +1,38 @@
+$header-gb-color: #E2E2DB;
+$border-color: rgb(81, 81, 81);
+.cluedo-sheet {
+    font-size: 12px;
+    .cluedo-table {
+        line-height: 21px;
+        .c-border {
+            border: 1px solid $border-color;
+        }
+        .c-grey-bg {
+            background: $header-gb-color;
+        }
+        .c-gamers {
+            border-right: none;
+            border-left: none;
+            width: 30%;
+        }
+        .c-uppercase {
+            text-transform: uppercase;
+        }
+        .c-b-w {
+            width: 10%;
+            border-right: none;
+        }
+        .c-g-row {
+            text-align: center;
+        }
+        .c-text-align {
+            text-align: center;
+        }
+        .c-b {
+            font-weight: bold;
+        }
+        .c-r-b-t {
+            border-top: none;
+        }
+    }
+}

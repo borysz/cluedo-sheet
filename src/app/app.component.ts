@@ -35,7 +35,7 @@ export class AppComponent {
 
   changePlayerClick(event){      
     event.preventDefault();
-
+    
     this.clickCount++;
     setTimeout(() => {
         if (this.clickCount === 1) {

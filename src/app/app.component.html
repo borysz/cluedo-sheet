@@ -9,14 +9,24 @@
     <div class="row cluedo-table no-gutters">
         <div class="col-sm">
             <div class="c-header">
-                <div class="float-left pl-1 pr-1 c-grey-bg c-gamers c-uppercase c-border">Játékosok</div>
+                <div class="float-left pl-1 pr-1 c-grey-bg c-players c-uppercase c-border">Játékosok</div>
                 <div class="float-left c-grey-bg c-b-w c-placeholder c-border">&nbsp;</div>
-                <div class="float-left pl-1 pr-1 c-g-row c-b-w c-border">ÉN</div>
-                <div class="float-left c-b-w c-g-row c-border">&nbsp;</div>
-                <div class="float-left c-b-w c-g-row c-border">&nbsp;</div>
-                <div class="float-left c-b-w c-g-row c-border">&nbsp;</div>
-                <div class="float-left c-b-w c-g-row c-border">&nbsp;</div>
-                <div class="float-left c-b-w c-g-row c-border">&nbsp;</div>
+                <div class="float-left pl-1 pr-1 c-g-row c-b-w c-border c-b">ÉN</div>
+                <div class="float-left c-b-w c-g-row c-border c-b">
+                    <input type="text" maxlength="3" class="c-input-players" />
+                </div>
+                <div class="float-left c-b-w c-g-row c-border c-b">
+                    <input type="text" maxlength="3" class="c-input-players" />
+                </div>
+                <div class="float-left c-b-w c-g-row c-border c-b">
+                    <input type="text" maxlength="3" class="c-input-players" />
+                </div>
+                <div class="float-left c-b-w c-g-row c-border c-b">
+                    <input type="text" maxlength="3" class="c-input-players" />
+                </div>
+                <div class="float-left c-b-w c-g-row c-border c-b">
+                    <input type="text" maxlength="3" class="c-input-players" />
+                </div>
             </div>
         </div>
     </div>
@@ -26,7 +36,7 @@
             <div class="row cluedo-table no-gutters">
                 <div class="col-sm">
                     <div class="c-header">
-                        <div class="float-left pl-1 pr-1 c-gamers c-uppercase c-border c-text-align c-b">
+                        <div class="float-left pl-1 pr-1 c-players c-uppercase c-border c-text-align c-b">
                             <span *ngIf="item.key == 0">Ki?</span>
                             <span *ngIf="item.key == 1">Mivel?</span>
                             <span *ngIf="item.key == 2">Hol?</span>
@@ -44,7 +54,7 @@
             <div class="row cluedo-table no-gutters">
                 <div class="col-sm">
                     <div class="c-content" *ngFor="let who of item.value">
-                        <div class="float-left pl-1 pr-1 c-gamers c-border c-text-align c-r-b-t">{{who}}</div>
+                        <div class="float-left pl-1 pr-1 c-players c-border c-text-align c-r-b-t">{{who}}</div>
                         <div class="float-left c-b-w c-placeholder c-border c-r-b-t">&nbsp;</div>
                         <div class="float-left pl-1 pr-1 c-g-row c-b-w c-border c-r-b-t">&nbsp;</div>
                         <div class="float-left c-b-w c-g-row c-border c-r-b-t">&nbsp;</div>

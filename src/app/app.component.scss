@@ -42,5 +42,24 @@ $border-color: rgb(81, 81, 81);
             text-transform: uppercase;
             text-align: center;
         }
+        .c-selected-img {
+            display: block;
+            margin: auto;
+            width: 20px;
+            height: 21px;
+        }
+        .c-img-x {
+            background: url('../assets/img/x-icon.svg');
+            background-size: 80%;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .c-img-q {
+            background: url('../assets/img/q-icon.svg');
+            background-size: 80%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            color: red;
+        }
     }
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Cluedo Sheet';
   headerList = {};
+  playersForm: FormGroup;
+
+
 
   constructor(){
     this.headerList = {
@@ -15,5 +19,22 @@ export class AppComponent {
       1: ['Bálterem', 'Billiárdszoba', 'Télikert', 'Ebédlő', 'Hall', 'Konyha', 'Könyvtár', 'Társalgó', 'Dolgozószoba'],
       2: ['Gyertyatartó', 'Tőr', 'Ólmosbot', 'Revolver', 'Szobor', 'Méreg'],
     }
+  }
+
+  ngOnInit(){
+    this.playersForm = new FormGroup({
+      player_2: new FormControl(),
+      player_3: new FormControl(),
+      player_4: new FormControl(),
+      player_5: new FormControl(),
+      player_6: new FormControl(),
+    });
+  }
+
+  onSubmitForm() {
+  }
+
+  changePlayerClick(event){
+    console.log(event);
   }
 }

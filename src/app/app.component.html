@@ -9,24 +9,26 @@
     <div class="row cluedo-table no-gutters">
         <div class="col-sm">
             <div class="c-header">
-                <div class="float-left pl-1 pr-1 c-grey-bg c-players c-uppercase c-border">Játékosok</div>
-                <div class="float-left c-grey-bg c-b-w c-placeholder c-border">&nbsp;</div>
-                <div class="float-left pl-1 pr-1 c-g-row c-b-w c-border c-b">ÉN</div>
-                <div class="float-left c-b-w c-g-row c-border c-b">
-                    <input type="text" maxlength="3" class="c-input-players" />
-                </div>
-                <div class="float-left c-b-w c-g-row c-border c-b">
-                    <input type="text" maxlength="3" class="c-input-players" />
-                </div>
-                <div class="float-left c-b-w c-g-row c-border c-b">
-                    <input type="text" maxlength="3" class="c-input-players" />
-                </div>
-                <div class="float-left c-b-w c-g-row c-border c-b">
-                    <input type="text" maxlength="3" class="c-input-players" />
-                </div>
-                <div class="float-left c-b-w c-g-row c-border c-b">
-                    <input type="text" maxlength="3" class="c-input-players" />
-                </div>
+                <form [formGroup]="playersForm" (ngSubmit)="onSubmitForm()">
+                    <div class="float-left pl-1 pr-1 c-grey-bg c-players c-uppercase c-border">Játékosok</div>
+                    <div class="float-left c-grey-bg c-b-w c-placeholder c-border c-player-0">&nbsp;</div>
+                    <div class="float-left pl-1 pr-1 c-g-row c-b-w c-border c-b c-player-1">ÉN</div>
+                    <div class="float-left c-b-w c-g-row c-border c-b">
+                        <input type="text" maxlength="3" class="c-input-players c-player-2" />
+                    </div>
+                    <div class="float-left c-b-w c-g-row c-border c-b">
+                        <input type="text" maxlength="3" class="c-input-players c-player-3" />
+                    </div>
+                    <div class="float-left c-b-w c-g-row c-border c-b">
+                        <input type="text" maxlength="3" class="c-input-players c-player-4" />
+                    </div>
+                    <div class="float-left c-b-w c-g-row c-border c-b">
+                        <input type="text" maxlength="3" class="c-input-players c-player-5" />
+                    </div>
+                    <div class="float-left c-b-w c-g-row c-border c-b">
+                        <input type="text" maxlength="3" class="c-input-players c-player-6" />
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -53,15 +55,15 @@
             </div>
             <div class="row cluedo-table no-gutters">
                 <div class="col-sm">
-                    <div class="c-content" *ngFor="let who of item.value">
+                    <div class="c-content" *ngFor="let who of item.value;index as i;">
                         <div class="float-left pl-1 pr-1 c-players c-border c-text-align c-r-b-t">{{who}}</div>
-                        <div class="float-left c-b-w c-placeholder c-border c-r-b-t">&nbsp;</div>
-                        <div class="float-left pl-1 pr-1 c-g-row c-b-w c-border c-r-b-t">&nbsp;</div>
-                        <div class="float-left c-b-w c-g-row c-border c-r-b-t">&nbsp;</div>
-                        <div class="float-left c-b-w c-g-row c-border c-r-b-t">&nbsp;</div>
-                        <div class="float-left c-b-w c-g-row c-border c-r-b-t">&nbsp;</div>
-                        <div class="float-left c-b-w c-g-row c-border c-r-b-t">&nbsp;</div>
-                        <div class="float-left c-b-w c-g-row c-border c-r-b-t">&nbsp;</div>
+                        <div class="float-left c-b-w c-placeholder c-border c-r-b-t" (click)="changePlayerClick('player-0-'+i+'-'+item.key)">&nbsp;</div>
+                        <div class="float-left pl-1 pr-1 c-g-row c-b-w c-border c-r-b-t" (click)="changePlayerClick('player-1-'+i+'-'+item.key)">&nbsp;</div>
+                        <div class="float-left c-b-w c-g-row c-border c-r-b-t" (click)="changePlayerClick('player-2-'+i+'-'+item.key)">&nbsp;</div>
+                        <div class="float-left c-b-w c-g-row c-border c-r-b-t" (click)="changePlayerClick('player-3-'+i+'-'+item.key)">&nbsp;</div>
+                        <div class="float-left c-b-w c-g-row c-border c-r-b-t" (click)="changePlayerClick('player-4-'+i+'-'+item.key)">&nbsp;</div>
+                        <div class="float-left c-b-w c-g-row c-border c-r-b-t" (click)="changePlayerClick('player-5-'+i+'-'+item.key)">&nbsp;</div>
+                        <div class="float-left c-b-w c-g-row c-border c-r-b-t" (click)="changePlayerClick('player-6-'+i+'-'+item.key)">&nbsp;</div>
                     </div>
                 </div>
             </div>

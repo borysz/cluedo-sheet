@@ -57,13 +57,27 @@
                 <div class="col-sm">
                     <div class="c-content" *ngFor="let who of item.value;index as i;">
                         <div class="float-left pl-1 pr-1 c-players c-border c-text-align c-r-b-t">{{who}}</div>
-                        <div class="float-left c-b-w c-placeholder c-border c-r-b-t" (click)="changePlayerClick('player-0-'+i+'-'+item.key)">&nbsp;</div>
-                        <div class="float-left pl-1 pr-1 c-g-row c-b-w c-border c-r-b-t" (click)="changePlayerClick('player-1-'+i+'-'+item.key)">&nbsp;</div>
-                        <div class="float-left c-b-w c-g-row c-border c-r-b-t" (click)="changePlayerClick('player-2-'+i+'-'+item.key)">&nbsp;</div>
-                        <div class="float-left c-b-w c-g-row c-border c-r-b-t" (click)="changePlayerClick('player-3-'+i+'-'+item.key)">&nbsp;</div>
-                        <div class="float-left c-b-w c-g-row c-border c-r-b-t" (click)="changePlayerClick('player-4-'+i+'-'+item.key)">&nbsp;</div>
-                        <div class="float-left c-b-w c-g-row c-border c-r-b-t" (click)="changePlayerClick('player-5-'+i+'-'+item.key)">&nbsp;</div>
-                        <div class="float-left c-b-w c-g-row c-border c-r-b-t" (click)="changePlayerClick('player-6-'+i+'-'+item.key)">&nbsp;</div>
+                        <div class="float-left c-b-w c-placeholder c-border c-text-align c-r-b-t" ngClass="player-0-{{i}}-{{item.key}}" (click)="changePlayerClick($event)">
+                            <span #imageContainer class="c-selected-img"></span>
+                        </div>
+                        <div class="float-left pl-1 pr-1 c-g-row c-b-w c-border c-r-b-t" ngClass="player-1-{{i}}-{{item.key}}" (click)="changePlayerClick($event)">
+                            <span class="c-selected-img"></span>
+                        </div>
+                        <div class="float-left c-b-w c-g-row c-border c-r-b-t" ngClass="player-2-{{i}}-{{item.key}}" (click)="changePlayerClick($event)">
+                            <span class="c-selected-img"></span>
+                        </div>
+                        <div class="float-left c-b-w c-g-row c-border c-r-b-t" ngClass="player-3-{{i}}-{{item.key}}" (click)="changePlayerClick($event)">
+                            <span class="c-selected-img"></span>
+                        </div>
+                        <div class="float-left c-b-w c-g-row c-border c-r-b-t" ngClass="player-4-{{i}}-{{item.key}}" (click)="changePlayerClick($event)">
+                            <span class="c-selected-img"></span>
+                        </div>
+                        <div class="float-left c-b-w c-g-row c-border c-r-b-t" ngClass="player-5-{{i}}-{{item.key}}" (click)="changePlayerClick($event)">
+                            <span class="c-selected-img"></span>
+                        </div>
+                        <div class="float-left c-b-w c-g-row c-border c-r-b-t" ngClass="player-6-{{i}}-{{item.key}}" (click)="changePlayerClick($event)">
+                            <span class="c-selected-img"></span>
+                        </div>
                     </div>
                 </div>
             </div>

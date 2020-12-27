@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -9,9 +9,8 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class AppComponent {
   title = 'Cluedo Sheet';
   headerList = {};
-  playersForm: FormGroup;
-
-
+  playersForm: FormGroup;  
+  clickCount: number = 0; 
 
   constructor(){
     this.headerList = {
@@ -34,7 +33,26 @@ export class AppComponent {
   onSubmitForm() {
   }
 
-  changePlayerClick(event){
-    console.log(event);
+  changePlayerClick(event){      
+    event.preventDefault();
+
+    this.clickCount++;
+    setTimeout(() => {
+        if (this.clickCount === 1) {
+          event.target.classList.remove('c-img-q');
+          event.target.classList.toggle('c-img-x');
+        } else if (this.clickCount === 2) {
+          event.target.classList.remove('c-img-x');
+          event.target.classList.toggle('c-img-q');
+        }
+        this.clickCount = 0;
+    }, 250)
+    
+    //event.target.classList.add('c-img-x');     
+    
+  }
+
+  changePlayerClickQ(event, value){  
+    console.log('calue');
   }
 }

@@ -61,5 +61,16 @@ $border-color: rgb(81, 81, 81);
             background-position: center center;
             color: red;
         }
+        .c-r-b-t:hover {
+            animation: highlight 1000ms ease-out;
+        }
+        @keyframes highlight {
+            0% {
+                background-color: rgb(170, 241, 168);
+            }
+            100% {
+                background-color: white;
+            }
+        }
     }
 }

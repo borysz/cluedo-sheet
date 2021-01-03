@@ -6,6 +6,18 @@
             </nav>
         </div>
     </div>
+    <div class="row no-gutters c-selectable-images">
+        <div class="col-sm">
+            <div class="float-left">
+                <span>Kiválaszott jelölő</span>
+            </div>
+            <div class="float-right">
+                <span class="c-choose-img c-img-x" [ngClass]="{'c-choose-img-selected': selectedMarker == 'x'}" (click)="chooseMarker('x')"></span>
+                <span class="c-choose-img c-img-q" [ngClass]="{'c-choose-img-selected': selectedMarker == 'q'}" (click)="chooseMarker('q')"></span>
+                <span class="c-choose-img c-img-m" [ngClass]="{'c-choose-img-selected': selectedMarker == 'm'}" (click)="chooseMarker('m')"></span>
+            </div>
+        </div>
+    </div>
     <div class="row cluedo-table no-gutters">
         <div class="col-sm">
             <div class="c-header">
@@ -40,8 +52,8 @@
                     <div class="c-header">
                         <div class="float-left pl-1 pr-1 c-players c-uppercase c-border c-text-align c-b">
                             <span *ngIf="item.key == 0">Ki?</span>
-                            <span *ngIf="item.key == 1">Mivel?</span>
-                            <span *ngIf="item.key == 2">Hol?</span>
+                            <span *ngIf="item.key == 1">Hol?</span>
+                            <span *ngIf="item.key == 2">Mivel?</span>
                         </div>
                         <div class="float-left c-grey-bg c-b-w c-placeholder c-border">&nbsp;</div>
                         <div class="float-left c-grey-bg pl-1 pr-1 c-g-row c-b-w c-border">&nbsp;</div>
@@ -58,7 +70,7 @@
                     <div class="c-content" *ngFor="let who of item.value;index as i;">
                         <div class="float-left pl-1 pr-1 c-players c-border c-text-align c-r-b-t">{{who}}</div>
                         <div class="float-left c-b-w c-placeholder c-border c-text-align c-r-b-t" ngClass="player-0-{{i}}-{{item.key}}">
-                            <span #imageContainer class="c-selected-img" (click)="changePlayerClick($event, 'player-0-'+i+'-'+item.key)"></span>
+                            <span class="c-selected-img" (click)="changePlayerClick($event, 'player-0-'+i+'-'+item.key)"></span>
                         </div>
                         <div class="float-left pl-1 pr-1 c-g-row c-b-w c-border c-r-b-t" ngClass="player-1-{{i}}-{{item.key}}">
                             <span class="c-selected-img" (click)="changePlayerClick($event, 'player-1-'+i+'-'+item.key)"></span>

@@ -61,6 +61,13 @@ $border-color: rgb(81, 81, 81);
             background-position: center center;
             color: red;
         }
+        .c-img-m {
+            background: url('../assets/img/m-icon.svg');
+            background-size: 80%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            color: red;
+        }
         .c-r-b-t:hover {
             animation: highlight 1000ms ease-out;
         }
@@ -71,6 +78,51 @@ $border-color: rgb(81, 81, 81);
             100% {
                 background-color: white;
             }
+        }
+    }
+    .c-selectable-images {
+        padding-top: 5px;
+        cursor: pointer;
+        .float-left {
+            span {
+                line-height: 21px;
+                padding-left: 5px;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+        }
+        .c-choose-img {
+            margin-right: 15px;
+            display: inline-block;
+            width: 21px;
+            height: 21px;
+            border: 1px solid $border-color;
+        }
+        .c-choose-img:hover {
+            background-color: rgb(170, 241, 168) !important;
+        }
+        .c-choose-img-selected {
+            background-color: rgb(170, 241, 168) !important;
+        }
+        .c-img-x {
+            background: url('../assets/img/x-icon.svg');
+            background-size: 80%;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+        .c-img-q {
+            background: url('../assets/img/q-icon.svg');
+            background-size: 80%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            color: red;
+        }
+        .c-img-m {
+            background: url('../assets/img/m-icon.svg');
+            background-size: 80%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            color: red;
         }
     }
 }
